@@ -1,9 +1,3 @@
-export const getDueDate = (daysToAdd = 2) => {
-    const date = new Date();
-    date.setDate(date.getDate() + daysToAdd);
-    return date.toISOString().split("T")[0];
-};
-
 export const formatDate = (dateString) => {
     const date = new Date(dateString);
     const day = String(date.getDate()).padStart(2, "0");

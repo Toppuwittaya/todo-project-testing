@@ -24,8 +24,8 @@
 1. Clone โปรเจค:
 
 ```bash
-git clone <repository-url>
-cd todo-project
+git clone https://github.com/Toppuwittaya/todo-project-testing
+cd  todo-project-testing
 ```
 
 2. ติดตั้ง dependencies:
@@ -70,6 +70,7 @@ src/
 │   ├── TaskForm      # Form สำหรับสร้าง/แก้ไข task
 │   └── TaskOverview   # Component แสดงภาพรวมของ tasks
 ├── context/           # React Context providers
+├── hooks/            # React custom hooks
 ├── pages/            # หน้าต่างๆ ของแอพ
 └── utils/            # Utility functions
 ```
