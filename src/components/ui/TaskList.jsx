@@ -27,7 +27,19 @@ export default function TaskList({ item, remove }) {
             </div>
             <div className="w-[70%] overflow-hidden mt-[-5px]">
                 <div className={`text-lg  truncate  ${item.done ? "line-through" : ""}`}>{item.title || ""}</div>
-                <div className="line-clamp-2 text-sm text-text-sub whitespace-pre-line">{item.description || ""}</div>
+                <div
+                    className="text-sm text-text-sub line-clamp-2 whitespace-normal"
+                    style={{
+                        display: "-webkit-box",
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        overflowWrap: ` break-word`,
+                        whiteSpace: "pre-wrap",
+                    }}
+                >
+                    {item.description || ""}
+                </div>
                 <div className="mt-4 text-error/70">Due : {(item.due_date && formatDate(item.due_date)) || "-"}</div>
             </div>
             <div className="flex space-x-2 ml-auto">

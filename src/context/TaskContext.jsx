@@ -21,9 +21,11 @@ export function TaskProvider({ children }) {
             dispatch({ type: "SET", payload: defaultData });
             localStorage.setItem("tasks", JSON.stringify(defaultData));
         }
+           final();
     }, []);
 
     useEffect(() => {
+        if (loading) return;
         localStorage.setItem("tasks", JSON.stringify(tasks));
         final();
     }, [tasks]);
